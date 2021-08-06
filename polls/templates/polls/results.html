@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>django-results</title>
+</head>
+<body>
+<h1>{{ question.question_text }}</h1>
+<ul>
+    {% for foo in question.choice_set.all %}
+        <li>{{ foo.choice_text }} -- {{ foo.votes }} vote{{ foo.votes|pluralize }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+&nbsp;&nbsp;
+<a href="{% url 'polls:index' %}">return index</a>
+</body>
+</html>

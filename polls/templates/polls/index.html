@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,  shrink-to-fit=no">
+    <title>django-index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'polls/img/style.css' %}">
+{#    <style>#}
+{#        .selector-for-some-widget {#}
+{#            box-sizing: content-box;#}
+{#        }#}
+{#    </style>#}
+</head>
+<body>
+<div class="container">
+    {% if latest_question_list %}
+        {% for question in latest_question_list %}
+            <div class="row">
+                {# <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>#}
+                <div class="col" style="text-align: center"><a href="{% url 'polls:detail' question.id %}" style="color: yellow">{{ question.question_text }}</a></div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+    {% now "SHORT_DATETIME_FORMAT" %}
+    {% now "Y" as current_year %}
+{#    {% blocktranslate %}Copyright {{ current_year }}{% endblocktranslate %}#}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
