@@ -20,7 +20,8 @@ from djangoProject import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('runoob/', views.runoob),
-    path('polls/', include('polls.urls'))
+    path('runoob/', views.index),
+    path('polls/', include('polls.urls')),
+    path('demo/',include('demo.urls'))
 
 ]

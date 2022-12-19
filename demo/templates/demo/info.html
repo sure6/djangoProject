@@ -1,0 +1,16 @@
+ <h1>demo info</h1>
+{% for x in demos %}
+    <input type="radio" name="info">
+    <ul id="info{{ x.id }}">
+        <li>id:{{ x.id }}</li>
+        <li>firstName:{{ x.first_name }}</li>
+        <li>lastName:{{ x.last_name }}</li>
+        <li>age:{{ x.age }}</li>
+        <li>gender:{{ x.gender }}</li>
+        <li><a href="{% url "demo:deteteinfo" x.id %}">detete info</a></li>
+        <li><a href="{% url "demo:updateinfo" x.id %}">update info</a></li>
+    </ul>
+{% endfor %}
+<a href="{% url "demo:addinfo" %}">add info</a>
+
+
