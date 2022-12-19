@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*',]
 # Application definition
 
 INSTALLED_APPS = [
+    'demo.apps.DemoConfig',
     'polls.apps.PollsConfig', # add app config
     'django.contrib.admin',
     'django.contrib.auth',
@@ -112,10 +113,10 @@ LANGUAGE_CODE = 'zh-Hans' # traditional
 
 
 # TIME_ZONE = 'UTC' # default time zone 'America/Chicago
-# TIME_ZONE = 'Australia/Sydney' # AEST
+TIME_ZONE = 'Australia/Sydney' # AEST
 # TIME_ZONE = 'ROC' # TW time zone
 # TIME_ZONE = 'Asia/Shanghai' # China time zone
-TIME_ZONE = 'PRC' # China time zone
+# TIME_ZONE = 'PRC' # China time zone
 # TIME_ZONE = 'Hongkong' # HongKong time zone
 # TIME_ZONE = 'Asia/Macau' # Macau time zone
 

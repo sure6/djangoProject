@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add Info</title>
+</head>
+<body>
+    <form method="post" action="{% url "demo:saveinfo" %}">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{ demo.id }}">
+        <table align="center">
+            <caption><h2>input info</h2></caption>
+            <tr>
+                <td> First Name:</td>
+                <td><input type="text" name="first_name" value="{{ demo.first_name }}"></td>
+            </tr>
+            <tr>
+                <td> Last Name:</td>
+                <td><input type="text" name="last_name" value="{{ demo.last_name }}"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" name="age" value="{{ demo.age }}"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male"
+                           {% if demo.gender == "male" %}
+                            checked
+                           {% endif %}
+                    >&nbsp;male
+                    <input type="radio" name="gender" value="female"
+                           {% if demo.gender == "female" %} checked
+                             {% endif %}
+                    >&nbsp;female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">save</button>
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+</body>
+</html>
