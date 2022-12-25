@@ -9,7 +9,7 @@ from demo.models import DemoModel
 
 # Create your views here.
 def index(request):
-    demos = DemoModel.objects.all().values()
+    demos = DemoModel.objects.filter(is_deleted=0).values()
     return render(request, "demo/demo.html", {"demos": demos})
 
 def addInfo(request):
@@ -19,7 +19,7 @@ def saveInfo(request):
     info = {}
     for para in request.POST:
         info.setdefault(para, request.POST[para])
-    if info['id'] is "":
+    if info['id'] == "":
         demo = DemoModel(first_name=info["first_name"], last_name=info["last_name"], age=info["age"], gender=info["gender"],
                          create_user="zhangsan", update_user="zhangsan")
         demo.save()
@@ -36,7 +36,8 @@ def saveInfo(request):
 
 def deteteinfo(request, id):
     demo=DemoModel.objects.get(id=id)
-    demo.delete()
+    demo.is_deleted=1
+    demo.save()
     return HttpResponseRedirect(reverse("demo:demo"))
 
 def updateInfo(request,id):
