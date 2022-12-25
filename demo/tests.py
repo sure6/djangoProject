@@ -1,4 +1,4 @@
-import time,datetime
+import time,datetime, uuid
 
 from django.test import TestCase
 
@@ -9,3 +9,6 @@ if __name__=="__main__":
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     # print(type(datetime.datetime.now()))
     print(type(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+    print(uuid.uuid4())
+
+
