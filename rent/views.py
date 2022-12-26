@@ -4,13 +4,17 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
-from rent.models import RentModel
+from rent.models import RentModel,Bill
 
 
 # Create your views here.
 def index(request):
     rents = RentModel.objects.filter(is_deleted=0).values()
     return render(request, "rent/index.html", {"rents": rents,"titleName":"rent", "context":"home"})
+
+def bill(request):
+    bills = Bill.objects.filter(is_deleted=0).values()
+    return render(request, "rent/bill.html", {"bills": bills,"titleName":"bill"})
 
 def addInfo(request):
     return render(request, "rent/index.html",{"titleName":"add info", "context":"addinfo"})

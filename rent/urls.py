@@ -14,6 +14,7 @@ from . import views
 app_name='rent'
 urlpatterns=[
     path("",views.index, name="rent"),
+    path("bill/",views.bill, name="bill"),
     path("addinfo/", views.addInfo, name="addinfo"),
     path("saveinfo/", views.saveInfo, name="saveinfo"),
     path("deteteinfo/<int:id>", views.deteteinfo, name="deteteinfo"),
