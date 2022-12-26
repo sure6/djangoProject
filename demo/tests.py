@@ -10,5 +10,4 @@ if __name__=="__main__":
     # print(type(datetime.datetime.now()))
     print(type(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
     print(uuid.uuid4())
-
-
+    print(0.3+0.04)

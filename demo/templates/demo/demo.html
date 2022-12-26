@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>demo</title>
+    <title> {{ titleName }}</title>
+    {% include "demo/css-tag.html" %}
+    {% include "demo/style.html" %}
 </head>
 <body>
-   {% include "demo/info.html" %}
+    {% if context == "index" %}
+        {% include "demo/info.html" %}
+    {% elif context == "addinfo" %}
+        {% include "demo/addinfo.html" %}
+    {% elif context == "updateinfo" %}
+        {% include "demo/addinfo.html" %}
+    {% endif %} 
+    {% include "demo/js-tag.html" %}
+   
 </body>
 </html>

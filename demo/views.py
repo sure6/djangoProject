@@ -10,10 +10,10 @@ from demo.models import DemoModel
 # Create your views here.
 def index(request):
     demos = DemoModel.objects.filter(is_deleted=0).values()
-    return render(request, "demo/demo.html", {"demos": demos})
+    return render(request, "demo/demo.html", {"demos": demos,"titleName":"demo", "context":"index"})
 
 def addInfo(request):
-    return render(request, "demo/addInfo.html")
+    return render(request, "demo/demo.html",{"titleName":"add info", "context":"addinfo"})
 
 def saveInfo(request):
     info = {}
@@ -42,5 +42,5 @@ def deteteinfo(request, id):
 
 def updateInfo(request,id):
     demo=DemoModel.objects.get(id=id)
-    context={"demo": demo}
-    return  render(request, "demo/addInfo.html", context)
+    context={"demo": demo,"titleName":"update info", "context":"updateinfo"}
+    return  render(request, "demo/demo.html", context)
