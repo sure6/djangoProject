@@ -11,9 +11,9 @@ from django.urls import path
 
 from . import views
 
-app_name='demo'
+app_name='rent'
 urlpatterns=[
-    path("",views.index, name="demo"),
+    path("",views.index, name="rent"),
     path("addinfo/", views.addInfo, name="addinfo"),
     path("saveinfo/", views.saveInfo, name="saveinfo"),
     path("deteteinfo/<int:id>", views.deteteinfo, name="deteteinfo"),

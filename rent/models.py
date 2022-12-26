@@ -4,7 +4,7 @@ from django.db.models import AutoField, CharField, IntegerField, DateTimeField
 
 
 # Create your models here.
-class DemoModel(models.Model):
+class RentModel(models.Model):
     id=AutoField(primary_key=True)
     first_name=CharField(max_length=100)
     last_name=CharField(max_length=100)

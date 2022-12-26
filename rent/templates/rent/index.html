@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {{ titleName }}</title>
+    {% include "rent/css-tag.html" %}
+    {% include "rent/style.html" %}
+</head>
+<body>
+    {% if context == "home" %}
+        {% include "rent/info.html" %}
+    {% elif context == "addinfo" %}
+        {% include "rent/addinfo.html" %}
+    {% elif context == "updateinfo" %}
+        {% include "rent/addinfo.html" %}
+    {% endif %} 
+    {% include "rent/js-tag.html" %}
+   
+</body>
+</html>

@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('runoob/', views.index),
     path('polls/', include('polls.urls')),
-    path('demo/',include('demo.urls'))
+    path('rent/',include('rent.urls'))
 
 ]

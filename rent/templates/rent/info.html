@@ -1,6 +1,6 @@
 <div class="container">
     <table class="table table-striped">
-        <caption>demo info</caption>
+        <caption>rent info</caption>
         <tr>
             <th>choose</th>
             <th>id</th>
@@ -11,7 +11,7 @@
             <th>detete info</th>
             <th>update info</th>
         </tr>
-        {% for x in demos %}
+        {% for x in rents %}
         <tr id="info{{ x.id }}">
             <td><input type="radio" name="info"></td>
             <td>{{ x.id }}</td>
@@ -19,12 +19,12 @@
             <td>{{ x.last_name }}</td>
             <td>{{ x.age }}</td>
             <td>{{ x.gender }}</td>
-            <td><a href="{% url "demo:deteteinfo" x.id %}" class="btn btn-warning btn-sm">detete info</a></td>
-            <td><a href="{% url "demo:updateinfo" x.id %}" class="btn btn-primary btn-sm">update info</a></td>
+            <td><a href="{% url "rent:deteteinfo" x.id %}" class="btn btn-warning btn-sm">detete info</a></td>
+            <td><a href="{% url "rent:updateinfo" x.id %}" class="btn btn-primary btn-sm">update info</a></td>
         </tr>
         {% endfor %}
     </table>
-    <a href="{% url "demo:addinfo" %}" class="btn btn-info" role="button">add info</a>
+    <a href="{% url "rent:addinfo" %}" class="btn btn-info" role="button">add info</a>
 </div>
 
 

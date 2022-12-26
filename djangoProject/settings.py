@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['*',]
 # Application definition
 
 INSTALLED_APPS = [
-    'demo.apps.DemoConfig',
+    'rent.apps.RentConfig',
     'polls.apps.PollsConfig', # add app config
     'django.contrib.admin',
     'django.contrib.auth',
