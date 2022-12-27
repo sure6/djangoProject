@@ -15,7 +15,6 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-print("@@@",os.path.join(BASE_DIR, 'admin\\static\\'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -144,7 +143,7 @@ STATICFILES_DIRS = [
 
 # 上传文件
 MEDIA_URL = "/medias/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'medias').replace('\\', '/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'medias')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
