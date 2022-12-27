@@ -8,13 +8,19 @@ from rent.models import RentModel,Bill
 
 
 # Create your views here.
+def bill(request):
+    """
+    bill history view parser
+    """
+    bills = Bill.objects.filter(is_deleted=0).values()
+    total_fee_aud=sum([bill['fee_aud'] for bill in bills])
+    total_fee_rmb=sum([bill['fee_rmb'] for bill in bills])
+    return render(request, "rent/bill.html", {"bills": bills,"titleName":"bill", "total_fee_aud":total_fee_aud, "total_fee_rmb":total_fee_rmb})
+
+
 def index(request):
     rents = RentModel.objects.filter(is_deleted=0).values()
     return render(request, "rent/index.html", {"rents": rents,"titleName":"rent", "context":"home"})
-
-def bill(request):
-    bills = Bill.objects.filter(is_deleted=0).values()
-    return render(request, "rent/bill.html", {"bills": bills,"titleName":"bill"})
 
 def addInfo(request):
     return render(request, "rent/index.html",{"titleName":"add info", "context":"addinfo"})

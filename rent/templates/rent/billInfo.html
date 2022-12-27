@@ -15,13 +15,22 @@
         <tr id="info{{ x.id }}">
             {% comment %} <td><input type="radio" name="info"></td> {% endcomment %}
             <td>{{ x.id }}</td>
-            <td>{{ x.start_date }}</td>
-            <td>{{ x.due_date }}</td>
+            <td>{{ x.start_date|date:"Y/m/d" }}</td>
+            <td>{{ x.due_date|date:"Y/m/d" }}</td>
             <td>{{ x.fee_aud }}</td>
             <td>{{ x.fee_rmb }}</td>
-            <td>{{ x.payment_date }}</td>
+            <td>{{ x.payment_date|date:"Y/m/d" }}</td>
             <td>{{ x.comments|default_if_none:"" }}</td>
         </tr>
         {% endfor %}
+        <tr>
+            <td>total</td>
+            <td></td>
+            <td></td>
+            <td>{{ total_fee_aud }}</td>
+            <td>{{ total_fee_rmb }}</td>
+            <td></td>
+            <td></td> 
+        </tr>
     </table>
 </div>
