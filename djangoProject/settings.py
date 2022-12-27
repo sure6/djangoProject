@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+print("@@@",os.path.join(BASE_DIR, 'admin\\static\\'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1a($!db9rj+asf$mixmukh)1egu0_49nz6b8+ipw+$hz*f6dtb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # 允许外网来访问
 ALLOWED_HOSTS = ['*',]
@@ -133,7 +135,16 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'../static/')     ## 新增行
+STATICFILES_DIRS = [
+  os.path.join(BASE_DIR, 'static'), # DEBUG=False时，注释掉就行
+]
+
+# 上传文件
+MEDIA_URL = "/medias/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'medias').replace('\\', '/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
