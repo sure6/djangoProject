@@ -2,7 +2,7 @@
     <table class="table table-striped">
         <caption>Rent History</caption>
         <tr>
-            <th>choose</th>
+            {% comment %} <th>choose</th> {% endcomment %}
             <th>id</th>
             <th>Start Date</th>
             <th>Due Date</th>
@@ -13,14 +13,14 @@
         </tr>
         {% for x in bills %}
         <tr id="info{{ x.id }}">
-            <td><input type="radio" name="info"></td>
+            {% comment %} <td><input type="radio" name="info"></td> {% endcomment %}
             <td>{{ x.id }}</td>
             <td>{{ x.start_date }}</td>
             <td>{{ x.due_date }}</td>
             <td>{{ x.fee_aud }}</td>
             <td>{{ x.fee_rmb }}</td>
             <td>{{ x.payment_date }}</td>
-            <td>{{ x.comments }}</td>
+            <td>{{ x.comments|default_if_none:"" }}</td>
         </tr>
         {% endfor %}
     </table>
