@@ -136,7 +136,7 @@ USE_TZ = False
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'../static/')     ## 新增行
+STATIC_ROOT = os.path.join(BASE_DIR,'static')     ## 新增行
 STATICFILES_DIRS = [
 #   os.path.join(BASE_DIR, 'static'), # DEBUG=False时，注释掉就行
 ]
