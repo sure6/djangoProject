@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1a($!db9rj+asf$mixmukh)1egu0_49nz6b8+ipw+$hz*f6dtb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # 允许外网来访问
 ALLOWED_HOSTS = ['*',]
@@ -138,7 +138,7 @@ USE_TZ = False
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')     ## 新增行
 STATICFILES_DIRS = [
-#   os.path.join(BASE_DIR, 'static'), # DEBUG=False时，注释掉就行
+  os.path.join(BASE_DIR, 'static'), # DEBUG=False时，注释掉就行
 ]
 
 # 上传文件
