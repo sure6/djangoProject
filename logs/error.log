@@ -1,0 +1,99 @@
+*** Starting uWSGI 2.0.21 (64bit) on [Thu Dec 29 15:19:39 2022] ***
+compiled with version: 11.3.0 on 29 December 2022 06:45:59
+os: Linux-5.15.0-56-generic #62-Ubuntu SMP Tue Nov 22 19:54:14 UTC 2022
+nodename: VM-24-12-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/ubuntu/sureking/djangoProject
+writing pidfile to /home/ubuntu/sureking/djangoProject/uwsgi.pid
+detected binary path: /home/ubuntu/sureking/djangoProject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/sureking/djangoProject
+your processes number limit is 7458
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+VACUUM: pidfile removed.
+unlink(): No such file or directory [core/uwsgi.c line 1675]
+*** Starting uWSGI 2.0.21 (64bit) on [Thu Dec 29 15:23:31 2022] ***
+compiled with version: 11.3.0 on 29 December 2022 06:45:59
+os: Linux-5.15.0-56-generic #62-Ubuntu SMP Tue Nov 22 19:54:14 UTC 2022
+nodename: VM-24-12-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/ubuntu/sureking/djangoProject
+writing pidfile to /home/ubuntu/sureking/djangoProject/uwsgi.pid
+detected binary path: /home/ubuntu/sureking/djangoProject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/sureking/djangoProject
+your processes number limit is 7458
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+VACUUM: pidfile removed.
+unlink(): No such file or directory [core/uwsgi.c line 1675]
+*** Starting uWSGI 2.0.21 (64bit) on [Thu Dec 29 15:23:49 2022] ***
+compiled with version: 11.3.0 on 29 December 2022 06:45:59
+os: Linux-5.15.0-56-generic #62-Ubuntu SMP Tue Nov 22 19:54:14 UTC 2022
+nodename: VM-24-12-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/ubuntu/sureking/djangoProject
+writing pidfile to /home/ubuntu/sureking/djangoProject/uwsgi.pid
+detected binary path: /home/ubuntu/sureking/djangoProject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/sureking/djangoProject
+your processes number limit is 7458
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+VACUUM: pidfile removed.
+unlink(): No such file or directory [core/uwsgi.c line 1675]
+*** Starting uWSGI 2.0.21 (64bit) on [Thu Dec 29 15:26:07 2022] ***
+compiled with version: 11.3.0 on 29 December 2022 06:45:59
+os: Linux-5.15.0-56-generic #62-Ubuntu SMP Tue Nov 22 19:54:14 UTC 2022
+nodename: VM-24-12-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/ubuntu/sureking/djangoProject
+writing pidfile to /home/ubuntu/sureking/djangoProject/uwsgi.pid
+detected binary path: /home/ubuntu/sureking/djangoProject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/sureking/djangoProject
+your processes number limit is 7458
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 3
+Python version: 3.10.6 (main, Nov 14 2022, 16:10:14) [GCC 11.3.0]
+Python main interpreter initialized at 0x55b3de5ff0b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166752 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55b3de5ff0b0 pid: 194997 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 194997)
+spawned uWSGI worker 1 (pid: 194998, cores: 2)
+*** Stats server enabled on /home/ubuntu/sureking/djangoProject/uwsgi.status fd: 9 ***
+invalid request block size: 21573 (max 4096)...skip
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/sureking/djangoProject/uwsgi.status (stats) removed.

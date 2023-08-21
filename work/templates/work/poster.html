@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Study Advertisement</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div style="background: #001641;height: 200px; padding: 0 5%;">
+            <img src="{% static 'work/logo-shorthand-horizontal-negative.png' %}" width="200" />
+        </div>
+        <div style="height: 10px;"></div>
+        <div style="background-color: #001641;padding: 5%;">
+            <h1 class="fw-bold" style="color: #fff;">
+                We Need Your Help for Research Study on Mental Wellness Application Development.
+            </h1>
+        </div>
+        <div style="background-image: url('{% static 'work/3.png' %}');height: 11px;"></div>
+        <!-- Write a brief, straightforward description of the study’s purpose, 
+            avoiding scientific jargon. 
+            Please consult IRB’s HRP315 worksheet on advertisements for additional guidance on creating compliant ad copy. 
+            The HRP315 worksheet can be downloaded at buffalo.edu/ctsi/hrp315. 
+        -->
+        <div style="padding: 4%;">
+            <p class="lh-lg fs-5" style="color: #495057;">
+                We are a research study group from the University of Wollongong. Our study title is The Role of Persuasive Features in Improving Mental Well-being: Design Guideline for Future Health Wellness application.
+            </p>
+        </div>
+        <div style="padding: 0 4%;">
+            <div class="float-start" style="width: 50%;">
+                <h4 class="fw-bold text-primary">Please spend up to 5 minutes completing an online survey if you are</h4>
+                <ul>
+                    <li>Volunteer to participate in this survey</li>
+                    <li>Above 18 years old</li>
+                    <li>Currently resident in Australia</li>
+                </ul>
+                {% comment %} <h6 class="fw-bold text-primary">Potential Benefits</h6>
+                <p>Paticipating in this study may improve your mental well-being and habits using apps</p> {% endcomment %}
+            </div>
+            <div class="float-end" style="width: 50%;">
+                <h4 class="fw-bold text-primary">Participation Involves</h4>
+                <ul>
+                    <li>Answer Multi-choice questions anonymously</li>
+                    <li>Make sure the information you provide is true and valid</li>
+                </ul>
+                
+            </div>
+            <div class="clearfix"></div>
+        </div> 
+        <div style="padding: 4%">
+            <h4 class="fw-bold text-primary" >To access the survey, please go to: </h4>
+            <p class="lh-sm fs-5 fst-italic text-break" style="color: #495057;"> https://surveyhero.com/c/persuasivefeatureonmentalhealth.</p>      
+            <p>Thanks for your time.</p>
+        </div>
+        <div style="padding: 0 4% 4% 4%;">
+            <h4 class="fw-bold text-primary">FOR MORE INFORMATION</h3>
+            <p class="fw-bold text-primary fst-italic">
+                Please contact Dr Khin Than  Win on +61 2 4221 4142 or email win@uow.edu.au AND the Ethics Manager on 02 4221 4457 or email rso-ethics@uow.edu.au.
+            </p>
+        </div>
+        <hr style="margin: 0;">
+        <div class="lh-lg fs-6" style="color: #495057;">Build 3, Faculty of Engineering and Information Sciences, Northfields Ave, Wollongong NSW 2522, Australia</div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

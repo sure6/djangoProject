@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="float-start">
+        <a href="{% url "rent:translate" "en" %}" class="link-primary"><img src="http://img2.3png.com/7941f13223399ee579a880ea99e071cceeae.png" width=20>EN</a>
+        <a href="javascript:window.print();" class="link-info">打印</a>
+        <a href="{% url "rent:export" %}" class="link-info">导出</a>
+    </div>
+    <div  class="float-end">
+        <em>￥人民币->$澳元(来源: 招商银行):&nbsp;&nbsp;</em><strong id="exchange"></strong>
+        <em>时间:&nbsp;&nbsp;</em><span id="time"></span> 
+    </div>
+    <table class="table table-striped">
+        <caption>房租历史</caption>
+        <tr>
+            {% comment %} <th>choose</th> {% endcomment %}
+            <th>序号</th>
+            <th>开始日期</th>
+            <th>截至日期</th>
+            <th>费用(澳元)</th>
+            <th>费用(人民币)</th>
+            <th>支付日期</th>
+            <th>说明</th>
+        </tr>
+        {% for x in bills %}
+        <tr id="info{{ x.id }}">
+            {% comment %} <td><input type="radio" name="info"></td> {% endcomment %}
+            <td>{{ x.id }}</td>
+            <td>{{ x.start_date|date:"Y/m/d" }}</td>
+            <td>{{ x.due_date|date:"Y/m/d" }}</td>
+            <td>A${{ x.fee_aud }}</td>
+            <td>￥{{ x.fee_rmb }}</td>
+            <td>{{ x.payment_date|date:"Y/m/d" }}</td>
+            <td>{{ x.comments|default_if_none:"" }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td>合计</td>
+            <td></td>
+            <td></td>
+            <td>A${{ total_fee_aud }}</td>
+            <td>￥{{ total_fee_rmb }}</td>
+            <td></td>
+            <td></td> 
+        </tr>
+    </table>
+</div>

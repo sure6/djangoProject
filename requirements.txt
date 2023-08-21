@@ -1,0 +1,5 @@
+django
+openpyxl
+django-crontab
+uwsgi
+bs4
